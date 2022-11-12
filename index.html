@@ -8,8 +8,42 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="main" id="mainid">
+        <!-- <center> -->
+        <div class="login" id="loginForm">
+            <div class="loginitem">
+                <h1 class="loginH">LOGIN</h1>
+
+                <form action="" class="loginForm">
+                    <label for="" class="lableLogin">email</label>
+                    <br />
+                    <input type="email" class="loginInput" id="loginEmail"  placeholder="Enter email" value="">
+                    <br />
+
+                    <label for="" class="lableLogin">Password</label>
+                    <br />
+                    <!-- <input type="password" class="loginInput" id="loginPass"  placeholder="Enter password"> -->
+                    <!-- <i class="fa-solid fa-eye" id="eye"></i> -->
+                    <div class="password-container">
+                        <input type="password" placeholder="Password..."class="loginInput" id="loginPass" value="" >
+                        <i class="fa-solid fa-eye" id="eye"></i>
+                   </div>
+                    <br />
+                    <center>
+                        <button class="loginBtn" id="loginBUTTON">LOGIN</button>
+                        <br />
+
+
+                        
+                    </center>
+                </form>
+            </div>
+        </div>
     
 
-    <script src="app.js"></script>
+
+    <script type="module" src="app.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 </html>

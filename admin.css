@@ -1,0 +1,65 @@
+
+
+/* .logoutbtn{
+    margin-left: 400px;
+    margin-right: 20px;
+ } */
+ .d-flex{
+    width: 500px;
+ }
+ .classes{
+    width: 95%;
+    margin-left:5px;
+ }
+ .madalinput{
+    border-radius: 5px;
+    border: 2px solid green;
+    outline: none;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 5px;
+}
+#classes{
+    display:none;
+}
+#file{
+    /* width: 550; */
+    padding: 8px 10px;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+}
+#fileimg{
+    display: none;
+}
+#classesdiv{
+    display: none;
+}
+#comp{
+    color: blue;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .logoutbtn{
+        margin-left: 1px;
+        margin-top: 5px;
+        margin-right: 20px;
+     }
+     .d-flex{
+        /* background-color: aqua; */
+        width: 100%;
+     }
+     .modal-backdrop {
+        z-index: 99px !important;
+        opacity: none !important;
+     }
+}

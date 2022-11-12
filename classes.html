@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="admin.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link " href="classes.html" role="button"  aria-expanded="false">
+                  classes
+                </a>
+                <ul class="dropdown-menu" id="classesList">
+                    <div id="classesList">
+
+                        <!-- <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li> -->
+                    </div>
+                    
+                    <li><hr class="dropdown-divider"></li>
+                       
+
+                </ul>
+              </li>
+              <!-- Modal
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Add Class </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <label>Course Name</label>
+            <input type="text" placeholder="Course Name" class="madalinput" id="CourseName" required>
+            <br />
+            <label>Teacher’s name            </label>
+              <input type="text" placeholder="Teacher’s name" class="madalinput" id="Teachername" required>
+            <label> Class timings</label>
+            <input type="text" placeholder="Class timings " class="madalinput" id="Classtimings" required>
+            <br />
+            <label>Schedule of classes
+            </label>
+              <input type="text" placeholder="Schedule of classes" class="madalinput" id="ScheduleOfClasses" required>
+            <label>Section name</label>
+            <input type="text" placeholder="Section name." class="madalinput" id="Sectionname"  maxlength="1" required>
+            <br />
+            <label>Batch Number</label>
+              <input type="number" placeholder="Batch Number" class="madalinput" id="BatchNumber" required>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="AddClassModal">Add class</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+              
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <button class="btn btn-outline-success logoutbtn" type="submit">Logout</button>
+          </div>
+        </div>
+      </nav>
+    <!-- navbar end -->
+
+
+    <!-- table -->
+    <div class="container">
+        <!-- <div id="tableClass"> -->
+
+            
+            <div class="table-responsive table-striped table-hover">
+                <table class="table">
+                    <thead>
+                        <tr >
+                  <!-- <th scope="col">#</th> -->
+                  <th scope="col">Course Name</th>
+                  <th scope="col">Teacher’s name</th>
+                  <th scope="col">Batch Number</th>
+                  <th scope="col">Section name</th>
+                  <th scope="col">Schedule of classes</th>
+                  <th scope="col">Class timings</th>
+                  <th scope="col"><button class="btn btn-outline-success classes" id="addClass" data-bs-toggle="modal" data-bs-target="#exampleModal">Add class</button></th>
+                  <th scope="col"></th>
+
+                </tr>
+                </thead>
+              <tbody id="tableClass">
+                
+              </tbody>
+        </table>
+      </div>
+    <!-- </div> -->
+
+    </div>
+    <!-- table end -->
+    
+
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/d505e8d343.js" crossorigin="anonymous"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="admin.js" type="module"></script>
+</body>
+</html>

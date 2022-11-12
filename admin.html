@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="admin.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" id="comp">SAYLANI</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home" id="page">students</a>
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link " href="#" role="button" id="classesNavBtn" aria-expanded="false">
+                  classes
+                </a>
+                <ul class="dropdown-menu" id="classesList">
+                    <div id="classesList">
+
+                        <!-- <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li> -->
+                    </div>
+                    
+                    <li><hr class="dropdown-divider"></li>
+                       
+
+                </ul>
+              </li>
+              <!-- Modal -->
+              
+            </ul>
+            <!-- <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form> -->
+            <button class="btn btn-outline-success logoutbtn" type="submit" id="logout">Logout</button>
+          </div>
+        </div>
+      </nav>
+    <!-- navbar end -->
+
+
+    <!-- table -->
+    <div class="container">
+        <!-- <div id="tableClass"> -->
+
+            <div id="classesdiv">
+                <h3>Classes</h3>
+                <select name="" id="CoursenameS" class="madalinput">
+
+                    <option value=""class="madalinput">select</option>
+                </select>
+                <!-- <option value=""></option> -->
+                <center>
+
+                    <div class="card" style="width: 18rem;">
+                        
+                        <div class="card-body">
+                            <input type="text"class="madalinput" placeholder="enter roll no" id="cardroll">
+                            <button class="btn btn-primary" id="cardsearch">search</button>
+                            <h5 class="card-title">Card </h5>
+                            <p class="card-text"> name = <span id="cardname"></span></p>
+                            <p class="card-text">father name = <span id="cardfname"></span></p>
+                            <p class="card-text">Roll no = <span id="cardrollno"></span></p>
+                            <p class="card-text">contact no = <span id="cardno"></span></p>
+                            <p class="card-text">CNIC = <span id="cardcnic"></span></p>
+                            <p class="card-text">course name = <span id="cardcoursename"></span></p>
+                            <!-- <input type="text"class="madalinput" placeholder="enter roll no" value="present" id="cardattendence"> -->
+                            <select name="" id="attendencedrop"  class="madalinput">
+                                
+                                <option value="present"class="madalinput">present</option>
+                                <option value="absent"class="madalinput">absent</option>
+                                <option value="leave"class="madalinput">leave</option>
+                                <option value="late"class="madalinput">late</option>
+                            </select>
+                            <button class="btn btn-primary" id="markattendence">mark attendence</button>
+                            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                        </div>
+                    </div>
+                </center>
+            </div>
+            <div class="table-responsive table-striped table-hover " id="classes">
+              <div id="classtablediv">
+
+                <h3>All classes </h3>
+                <table class="table">
+                    <thead>
+                        <tr >
+                   <!-- <th scope="col">#</th>  -->
+                  <th scope="col">Course Name</th>
+                  <th scope="col">Teacher’s name</th>
+                  <th scope="col">Batch Number</th>
+                  <th scope="col">Section name</th>
+                  <th scope="col">Schedule of classes</th>
+                  <th scope="col">Class timings</th>
+                  <th scope="col"><button class="btn btn-outline-success classes" id="addClass" data-bs-toggle="modal" data-bs-target="#exampleModal">Add class</button></th>
+                  <th scope="col"></th>
+
+                </tr>
+                </thead>
+              <tbody id="tableClass">
+                
+              </tbody>
+            </table>
+
+           
+
+          </div>
+
+      </div>
+    <!-- </div> -->
+    
+    <div class="table-responsive table-striped table-hover " id="home">
+      <table class="table">
+                    <thead>
+                        <tr >
+                  <!-- <th scope="col">#</th> -->
+                  <th scope="col"> Name</th>
+                  <th scope="col"> Father name</th>
+                  <th scope="col">Roll no</th>
+                  <th scope="col">Contact Number</th>
+                  <th scope="col">CNIC number</th>
+                  <th scope="col">Course Name</th>
+                  <th scope="col"><button class="btn btn-outline-success classes" id="addstudents" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Add Student</button></th>
+                  <th scope="col"></th>
+
+                </tr>
+                </thead>
+              <tbody id="tableHome">
+                
+              </tbody>
+        </table>
+      </div>
+
+    </div>
+    <!-- table end -->
+    
+
+    <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Add Student</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <label>Student Name</label>
+            <input type="text" placeholder="Course Name" class="madalinput" id="studentName" required>
+            <br />
+            <label>Father Name</label>
+              <input type="text" placeholder="Father name " class="madalinput" id="fathername" required>
+            <label> Roll Number</label>
+            <input type="number" placeholder="Roll Number " class="madalinput" id="rollno" required>
+            <br />
+            <label>Contact Number
+            </label>
+              <input type="number" placeholder="Contact Number" maxlength="11" class="madalinput" id="contactno" required>
+            <label>CNIC number
+            </label>
+            <input type="number" placeholder="CNIC number"maxlength="15" class="madalinput" id="CNICnumber"  maxlength="1" required>
+            <br />
+            <label>Course Name</label>
+              <input type="text" placeholder="Course Name" class="madalinput" id="CoursenameS" required>
+              <!-- <select name="" class="madalinput"id="CoursenameS" >
+                <option value=""class="madalinput">select</option> -->
+                <!-- <option value=""></option> -->
+              </select>
+              <!-- <label for="fileimg" id="file">Upload image</label>
+          <input type="file" id="fileimg" accept="image/*"> -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="addstudent">Add Student</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Add Class </h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <label>Course Name</label>
+                <input type="text" placeholder="Course Name" class="madalinput" id="CourseName" required>
+                <br />
+                <label>Teacher’s name            </label>
+                  <input type="text" placeholder="Teacher’s name" class="madalinput" id="Teachername" required>
+                <label> Class timings</label>
+                <input type="text" placeholder="Class timings " class="madalinput" id="Classtimings" required>
+                <br />
+                <label>Schedule of classes
+                </label>
+                  <input type="text" placeholder="Schedule of classes" class="madalinput" id="ScheduleOfClasses" required>
+                <label>Section name</label>
+                <input type="text" placeholder="Section name." class="madalinput" id="Sectionname"  maxlength="1" required>
+                <br />
+                <label>Batch Number</label>
+                  <input type="number" placeholder="Batch Number" class="madalinput" id="BatchNumber" required>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="AddClassModal">Add class</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/d505e8d343.js" crossorigin="anonymous"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="admin.js" type="module"></script>
+</body>
+</html>
